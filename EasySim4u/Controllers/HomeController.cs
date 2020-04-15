@@ -179,7 +179,7 @@ namespace EasySim4u.Controllers
             objEmail.Body = "<h3 style='font-family:Arial'>" + nomeAss + "</h3>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 "<tr style='background-color:#0a2f59'>" +
-                "<td style='width:120px;'><img src='http://www.unioperadora.com.br/assets/img/logo/logo.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
+                "<td style='width:120px;'><img src='http://www.unioperadora.com.br/assets/img/logo/LogoEasySim4u.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
                 "<td style='width:380px'><h3 style='font-family:Arial; color:white; text-align:center'>Assinatura - " + assunto + "</h3></td></tr></table>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 linhaTipoDoc +
@@ -691,7 +691,7 @@ namespace EasySim4u.Controllers
             //objEmail.From = new MailAddress("pediulogistica@uniglobaltelecom.com");
             objEmail.From = new MailAddress(email);
             //objEmail.ReplyTo = new MailAddress("davidfico22@gmail.com", "damico@mdk.net.br");
-            objEmail.To.Add("logistica@unioperadora.com.br");
+            objEmail.To.Add("contato@easysim4u.com");
             //objEmail.To.Add("davidfico22@gmail.com");
             objEmail.Bcc.Add("damico@mdk.net.br");
             objEmail.Priority = MailPriority.Normal;
@@ -720,7 +720,7 @@ namespace EasySim4u.Controllers
             objSmtp.Host = "mail.unioperadora.com.br";
             objSmtp.Port = 587;
             objSmtp.EnableSsl = true;
-            objSmtp.Credentials = new NetworkCredential("logistica@unioperadora.com.br", "logistica@br");
+            objSmtp.Credentials = new NetworkCredential("contato_easy@unioperadora.com", "Campinas2020");
             objSmtp.Send(objEmail);
 
 
@@ -744,7 +744,7 @@ namespace EasySim4u.Controllers
             objEmail.Body = "<h3 style='font-family:Arial'>" + nome + "</h3>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 "<tr style='background-color:#0a2f59'>" +
-                "<td style='width:120px;'><img src='http://www.unioperadora.com.br/assets/img/logo/logo.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
+                "<td style='width:120px;'><img src='http://www.unioperadora.com.br/assets/img/logo/LogoEasySim4u.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
                 "<td style='width:380px'><h3 style='font-family:Arial; color:white; text-align:center'>" + assunto + "</h3></td></tr></table>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 "<tr><td>Email:</td><td>" + email + "</td></tr>" +
@@ -757,7 +757,7 @@ namespace EasySim4u.Controllers
             objSmtp.Host = "mail.unioperadora.com.br";
             objSmtp.Port = 587;
             objSmtp.EnableSsl = true;
-            objSmtp.Credentials = new NetworkCredential("logistica@unioperadora.com.br", "logistica@br");
+            objSmtp.Credentials = new NetworkCredential("contato_easy@unioperadora.com", "Campinas2020");
             objSmtp.Send(objEmail);
 
 
@@ -782,7 +782,7 @@ namespace EasySim4u.Controllers
             objEmail.Body = "<h3 style='font-family:Arial'>" + nome + "</h3>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 "<tr style='background-color:#0a2f59'>" +
-                "<td style='width:120px;'><img src='http://www.unioperadora.com.br/assets/img/logo/logo.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
+                "<td style='width:120px;'><img src='http://www.unioperadora.com.br/assets/img/logo/LogoEasySim4u.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
                 "<td style='width:380px'><h3 style='font-family:Arial; color:white; text-align:center'>Ativação - " + assunto + "</h3></td></tr></table>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 "<tr><td style='width:120px;'>RG:</td><td style='width:380px'>" + rg + "</td></tr>" +
@@ -805,7 +805,7 @@ namespace EasySim4u.Controllers
             objSmtp.Host = "mail.unioperadora.com.br";
             objSmtp.Port = 587;
             objSmtp.EnableSsl = true;
-            objSmtp.Credentials = new NetworkCredential("logistica@unioperadora.com.br", "logistica@br");
+            objSmtp.Credentials = new NetworkCredential("contato_easy@unioperadora.com", "Campinas2020");
             objSmtp.Send(objEmail);
 
 
@@ -884,7 +884,7 @@ namespace EasySim4u.Controllers
             objEmail.Body = "<h3 style='font-family:Arial'>" + nome + "</h3>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 "<tr style='background-color:#0a2f59'>" +
-                "<td style='width:120px;'><img src='http://www.unioperadora.com.br/assets/img/logo/logo.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
+                "<td style='width:120px;'><img src='http://www.unioperadora.com.br/assets/img/logo/LogoEasySim4u.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
                 "<td style='width:380px'><h3 style='font-family:Arial; color:white; text-align:center'>Assinatura - " + assunto + "</h3></td></tr></table>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 linhaTipoDoc +
@@ -906,7 +906,7 @@ namespace EasySim4u.Controllers
             objSmtp.Host = "mail.unioperadora.com.br";
             objSmtp.Port = 587;
             objSmtp.EnableSsl = true;
-            objSmtp.Credentials = new NetworkCredential("logistica@unioperadora.com.br", "logistica@br");
+            objSmtp.Credentials = new NetworkCredential("contato_easy@unioperadora.com", "Campinas2020");
             objSmtp.Send(objEmail);
 
 
