@@ -55,7 +55,7 @@ namespace EasySim4u.Controllers
             switch (plano)
             {
                 case 1:
-                    ViewBag.Img = "Banner5Gbdescri1280.fw.png";
+                    ViewBag.Img = "banners-planos-um.png";
                     ViewBag.TituloPlano = "Plano Controle - 5Gb";
                     planoStr = "Plano Controle - 5Gb";
                     ViewBag.CodPlano = "ED286F04-6363-E7A8-8464-9FACDBECCAB9";
@@ -66,7 +66,7 @@ namespace EasySim4u.Controllers
                     break;
 
                 case 2:
-                    ViewBag.Img = "Pano1.jpeg";
+                    ViewBag.Img = "banners-planos-dois.png";
                     ViewBag.TituloPlano = "Plano Controle - 10Gb";
                     planoStr = "Plano Controle - 10Gb";
                     ViewBag.CodPlano = "5BEFCBEB-2424-4430-0432-9F9828128A99";
@@ -77,7 +77,7 @@ namespace EasySim4u.Controllers
                     break;
 
                 case 3:
-                    ViewBag.Img = "Plano2.jpeg";
+                    ViewBag.Img = "banners-planos-tres.png";
                     ViewBag.TituloPlano = "Plano Controle - 15Gb";
                     planoStr = "Plano Controle - 15Gb";
                     ViewBag.Botao = "<form action='https://pagseguro.uol.com.br/pre-approvals/request.html' method='post'>" +
@@ -92,7 +92,7 @@ namespace EasySim4u.Controllers
                     break;
 
                 case 4:
-                    ViewBag.Img = "Plano3.jpeg";
+                    ViewBag.Img = "banners-planos-quatro.png";
                     ViewBag.TituloPlano = "Plano Controle - 20Gb";
                     planoStr = "Plano Controle - 20Gb";
                     ViewBag.CodPlano = "B1C63082-5252-EE01-1448-9F9EA998F655";
@@ -103,7 +103,7 @@ namespace EasySim4u.Controllers
                     break;
 
                 case 5:
-                    ViewBag.Img = "Bannermenorplano50gbdescrição.png";
+                    ViewBag.Img = "banners-planos-cinco.png";
                     ViewBag.TituloPlano = "Plano Controle - 50Gb";
                     planoStr = "Plano Controle - 50Gb";
                     ViewBag.CodPlano = "A64D4245-4848-4397-745C-8FBA5DB91A89";

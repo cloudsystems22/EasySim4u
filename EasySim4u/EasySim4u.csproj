@@ -217,6 +217,11 @@
     <Content Include="assets\img-banners\banner-quatro.png" />
     <Content Include="assets\img-banners\banner-tres.png" />
     <Content Include="assets\img-banners\banner-um.png" />
+    <Content Include="assets\img-banners\banners-planos-cinco.png" />
+    <Content Include="assets\img-banners\banners-planos-dois.png" />
+    <Content Include="assets\img-banners\banners-planos-quatro.png" />
+    <Content Include="assets\img-banners\banners-planos-tres.png" />
+    <Content Include="assets\img-banners\banners-planos-um.png" />
     <Content Include="assets\img-temp\1000x1000\img1.png" />
     <Content Include="assets\img-temp\100x100\img1.jpg" />
     <Content Include="assets\img-temp\100x100\img10.jpg" />
