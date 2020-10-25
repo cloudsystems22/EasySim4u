@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*------------------------------------
   Default Styles
 ------------------------------------*/
@@ -8418,7 +8418,7 @@ body .u-icon-v5 {
 }
 
 .u-icon-v5.g-bg-green::after {
-  background-color: #72c02c;
+  background-color: #077ed4;
 }
 
 .u-icon-v5.g-bg-blue::after {
@@ -19725,7 +19725,7 @@ li:last-child .u-dot-line-v2::after, li:last-child
 }
 
 .u-ribbon-bookmark.g-bg-green::after {
-  border-color: #72c02c;
+  border-color: #077ed4;
 }
 
 .u-ribbon-bookmark.g-bg-blue::after {
@@ -20011,8 +20011,8 @@ li:last-child .u-dot-line-v2::after, li:last-child
 }
 
 .u-ribbon-clip-v4__inner.g-bg-green {
-  -webkit-box-shadow: 0 0 0 3px #72c02c, 0 21px 5px -18px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 0 3px #72c02c, 0 21px 5px -18px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 3px #077ed4, 0 21px 5px -18px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 0 3px #077ed4, 0 21px 5px -18px rgba(0, 0, 0, 0.6);
 }
 
 .u-ribbon-clip-v4__inner.g-bg-blue {
@@ -27765,7 +27765,7 @@ img.u-block-hover__main--magnifier-top-left {
 }
 
 .u-fancybox-theme .fancybox-thumbs > ul > li::before {
-  border-color: #72c02c;
+  border-color: #077ed4;
 }
 
 .fancybox-controls--canzoomIn .fancybox-placeholder,
@@ -28736,9 +28736,9 @@ pre[class*="language-"] .toolbar-item a {
 .g-bg-primary-gradient-opacity-v1,
 .g-bg-primary-gradient-opacity-v1--after::after {
   background-repeat: repeat-x;
-  background-image: -webkit-linear-gradient(300deg, #72c02c, rgba(51, 152, 220, 0.7));
-  background-image: -o-linear-gradient(300deg, #72c02c, rgba(51, 152, 220, 0.7));
-  background-image: linear-gradient(150deg, #72c02c, rgba(51, 152, 220, 0.7));
+  background-image: -webkit-linear-gradient(300deg, #077ed4, rgba(51, 152, 220, 0.7));
+  background-image: -o-linear-gradient(300deg, #077ed4, rgba(51, 152, 220, 0.7));
+  background-image: linear-gradient(150deg, #077ed4, rgba(51, 152, 220, 0.7));
 }
 
 /* Gray Gradient */
@@ -29433,7 +29433,7 @@ pre[class*="language-"] .toolbar-item a {
 
 /* Color Green */
 .g-bg-green {
-  background-color: #72c02c !important;
+  background-color: #077ed4 !important;
 }
 
 .g-bg-green-opacity-0_1 {
@@ -29441,7 +29441,7 @@ pre[class*="language-"] .toolbar-item a {
 }
 
 .g-bg-green--hover:hover {
-  background-color: #72c02c !important;
+  background-color: #077ed4 !important;
 }
 
 /* Color Blue */
@@ -31346,15 +31346,15 @@ pre[class*="language-"] .toolbar-item a {
 ------------------------------------*/
 /* Color Green */
 .g-brd-green {
-  border-color: #72c02c !important;
+  border-color: #077ed4 !important;
 }
 
 .g-brd-green--hover:hover, .g-brd-green--active.active {
-  border-color: #72c02c !important;
+  border-color: #077ed4 !important;
 }
 
 *:hover > .g-brd-green--hover-parent {
-  border-color: #72c02c !important;
+  border-color: #077ed4 !important;
 }
 
 /* Color Blue */
@@ -32020,19 +32020,19 @@ pre[class*="language-"] .toolbar-item a {
 ------------------------------------*/
 /* Color Green */
 .g-brd-green-top {
-  border-top-color: #72c02c !important;
+  border-top-color: #077ed4 !important;
 }
 
 .g-brd-green-bottom {
-  border-bottom-color: #72c02c !important;
+  border-bottom-color: #077ed4 !important;
 }
 
 .g-brd-green-left {
-  border-left-color: #72c02c !important;
+  border-left-color: #077ed4 !important;
 }
 
 .g-brd-green-right {
-  border-right-color: #72c02c !important;
+  border-right-color: #077ed4 !important;
 }
 
 /* Color Blue */
@@ -35354,11 +35354,11 @@ svg.g-transition--linear polygon {
 ------------------------------------*/
 /* Color Green */
 .g-color-green {
-  color: #72c02c !important;
+  color: #077ed4 !important;
 }
 
 .g-color-green--hover:hover {
-  color: #72c02c !important;
+  color: #077ed4 !important;
 }
 
 /* Color Blue */

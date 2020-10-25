@@ -39,6 +39,38 @@ namespace EasySim4u.Controllers
             return View();
         }
 
+        public JsonResult planoAtivation(string plano)
+        {
+            string linkNavegacao = "";
+            switch (plano)
+            {
+                case "Plano Controle 3Gb":
+                    linkNavegacao = "https://pag.ae/7W433-36a";
+                    break;
+
+                case "Plano Controle 5Gb":
+                    linkNavegacao = "https://pag.ae/7W434Kcma";
+                    break;
+
+                case "Plano Controle 10Gb":
+                    linkNavegacao = "https://pag.ae/7W435mnKo";
+                    break;
+
+                case "Plano Controle 15Gb":
+                    linkNavegacao = "https://pag.ae/7W435-Uuq";
+                    break;
+
+                case "Plano Controle 20Gb":
+                    linkNavegacao = "https://pag.ae/7W436EFzu";
+                    break;
+
+                case "Plano Controle 50Gb":
+                    linkNavegacao = "https://pag.ae/7W4375uxQ";
+                    break;
+            }
+            return Json(new { linkNavegacao }, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult Assinatura(int plano)
         {
 
@@ -56,53 +88,65 @@ namespace EasySim4u.Controllers
             {
                 case 1:
                     ViewBag.Img = "banners-planos-um.png";
-                    ViewBag.TituloPlano = "Plano Controle - 5Gb";
-                    planoStr = "Plano Controle - 5Gb";
+                    ViewBag.TituloPlano = "Plano Controle - 3Gb";
+                    planoStr = "Plano Controle - 3Gb";
                     ViewBag.CodPlano = "ED286F04-6363-E7A8-8464-9FACDBECCAB9";
                     tokenAss = "ED286F04-6363-E7A8-8464-9FACDBECCAB9";
-                    valorPlan = Convert.ToDecimal("49.90");
+                    valorPlan = Convert.ToDecimal("39.90");
                     idPlano = "8112e29e94175905bafca5bf437d253e";
-                    ViewBag.Link = "http://pag.ae/7VhogQScN";
+                    ViewBag.Link = "http://pag.ae/7V-Q9wD9r";
+                    //ViewBag.Link = "https://pag.ae/7Wcmk2CB9";
                     break;
 
                 case 2:
                     ViewBag.Img = "banners-planos-dois.png";
-                    ViewBag.TituloPlano = "Plano Controle - 10Gb";
-                    planoStr = "Plano Controle - 10Gb";
+                    ViewBag.TituloPlano = "Plano Controle - 5Gb";
+                    planoStr = "Plano Controle - 5Gb";
                     ViewBag.CodPlano = "5BEFCBEB-2424-4430-0432-9F9828128A99";
                     tokenAss = "5BEFCBEB-2424-4430-0432-9F9828128A99";
-                    valorPlan = Convert.ToDecimal("59.90");
+                    valorPlan = Convert.ToDecimal("49.90");
                     idPlano = "3977db37c524d10bfe85c89feb2c3fa6";
-                    ViewBag.Link = "http://pag.ae/7VfxmPNKs";
+                    ViewBag.Link = "http://pag.ae/7VZvv-A9u";
                     break;
 
                 case 3:
                     ViewBag.Img = "banners-planos-tres.png";
-                    ViewBag.TituloPlano = "Plano Controle - 15Gb";
-                    planoStr = "Plano Controle - 15Gb";
+                    ViewBag.TituloPlano = "Plano Controle - 10Gb";
+                    planoStr = "Plano Controle - 10Gb";
                     ViewBag.Botao = "<form action='https://pagseguro.uol.com.br/pre-approvals/request.html' method='post'>" +
                                     "<input type='hidden' name = 'code' value = '24A399FC11115222240B3FB33815223B' />" +
                                     "<input type='hidden' name = 'iot' value = 'button' />" +
                                     "<input type='image' src='https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/120x53-assinar.gif' name='submit' alt='Pague com PagSeguro - É rápido, grátis e seguro!' width='120' height='53' /></form> ";
                     ViewBag.CodPlano = "24A399FC-1111-5222-240B-3FB33815223B";
                     tokenAss = "24A399FC-1111-5222-240B-3FB33815223B";
-                    valorPlan = Convert.ToDecimal("79.90");
+                    valorPlan = Convert.ToDecimal("59.90");
                     idPlano = "eb909df23502218d04537c87e84ccc2b";
-                    ViewBag.Link = "http://pag.ae/7Vg-1AZcN";
+                    ViewBag.Link = "http://pag.ae/7VZvBgoCR";
                     break;
 
                 case 4:
                     ViewBag.Img = "banners-planos-quatro.png";
-                    ViewBag.TituloPlano = "Plano Controle - 20Gb";
-                    planoStr = "Plano Controle - 20Gb";
+                    ViewBag.TituloPlano = "Plano Controle - 15Gb";
+                    planoStr = "Plano Controle - 15Gb";
                     ViewBag.CodPlano = "B1C63082-5252-EE01-1448-9F9EA998F655";
                     tokenAss = "B1C63082-5252-EE01-1448-9F9EA998F655";
-                    valorPlan = Convert.ToDecimal("89.90");
+                    valorPlan = Convert.ToDecimal("79.90");
                     idPlano = "05d95904a4ad1b27c911cab692b2f544";
-                    ViewBag.Link = "http://pag.ae/7Vh5iBxw9";
+                    ViewBag.Link = "http://pag.ae/7VZvBLHYR";
                     break;
 
                 case 5:
+                    ViewBag.Img = "banners-planos-tres.png";
+                    ViewBag.TituloPlano = "Plano Controle - 20Gb";
+                    planoStr = "Plano Controle - 20Gb";
+                    ViewBag.CodPlano = "A64D4245-4848-4397-745C-8FBA5DB91A89";
+                    tokenAss = "A64D4245-4848-4397-745C-8FBA5DB91A89";
+                    valorPlan = Convert.ToDecimal("89.90");
+                    idPlano = "15b808f045b411fac57159017b31fe35";
+                    ViewBag.Link = "http://pag.ae/7VZvC8vxQ";
+                    break;
+
+                case 6:
                     ViewBag.Img = "banners-planos-cinco.png";
                     ViewBag.TituloPlano = "Plano Controle - 50Gb";
                     planoStr = "Plano Controle - 50Gb";
@@ -110,8 +154,10 @@ namespace EasySim4u.Controllers
                     tokenAss = "A64D4245-4848-4397-745C-8FBA5DB91A89";
                     valorPlan = Convert.ToDecimal("119.90");
                     idPlano = "15b808f045b411fac57159017b31fe35";
-                    ViewBag.Link = "http://pag.ae/7Vhcmk9Eq";
+                    ViewBag.Link = "http://pag.ae/7VZvCuier";
                     break;
+
+
             }
             ViewBag.Plano = plano;
 
@@ -120,7 +166,7 @@ namespace EasySim4u.Controllers
         }
 
         [HttpPost]
-        public ActionResult Assinatura(int plano, string assunto, string nomeAss, string emailAss, string cepAss, string bairroAss, string logradouroAss, string numeroAss, string cidadeAss, string estadoAss, string numTelAss, string complementoAss, string numDDDAss, string cpfAss, string rgAss, string cellDDD, string numCell, string tipoNum, string radGroupBtn2_1, string radGroupBtn2_2, HttpPostedFileBase pdfFile, string newsletter)
+        public ActionResult Assinatura(int plano, string assunto, string nomeAss, string emailAss, string cepAss, string bairroAss, string logradouroAss, string cidadeAss, string estadoAss, string numTelAss, string complementoAss, string numDDDAss, string cpfAss, string rgAss, string cellDDD, string numCell, string radGroupBtn2_1, string radGroupBtn2_2, HttpPostedFileBase pdfFile, string newsletter, string iccidAss)
         {
 
             ViewBag.Plano = plano;
@@ -165,12 +211,13 @@ namespace EasySim4u.Controllers
             }
 
             MailMessage objEmail = new MailMessage();
-            //objEmail.From = new MailAddress("pediulogistica@uniglobaltelecom.com");
             objEmail.From = new MailAddress(emailAss);
             //objEmail.ReplyTo = new MailAddress("davidfico22@gmail.com", "damico@mdk.net.br");
-            objEmail.To.Add("ativacao@unioperadora.com.br");
+            objEmail.To.Add("operacional@easysim4u.com");
             //objEmail.To.Add("davidfico22@gmail.com");
-            objEmail.Bcc.Add("damico@mdk.net.br");
+            objEmail.Bcc.Add("leonardo@unioperadora.com.br");
+            objEmail.To.Add("damico@mdk.net.br");
+            //objEmail.Bcc.Add("crm.easysim4u@gmail.com");
             objEmail.Priority = MailPriority.Normal;
             objEmail.IsBodyHtml = true;
             objEmail.Subject = assunto;
@@ -179,7 +226,7 @@ namespace EasySim4u.Controllers
             objEmail.Body = "<h3 style='font-family:Arial'>" + nomeAss + "</h3>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 "<tr style='background-color:#0a2f59'>" +
-                "<td style='width:120px;'><img src='http://www.unioperadora.com.br/assets/img/logo/LogoEasySim4u.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
+                "<td style='width:120px;'><img src='https://www.easysim4ubrasil.com/assets/img/logo/LogoEasySim4u.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
                 "<td style='width:380px'><h3 style='font-family:Arial; color:white; text-align:center'>Assinatura - " + assunto + "</h3></td></tr></table>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 linhaTipoDoc +
@@ -194,6 +241,7 @@ namespace EasySim4u.Controllers
                 "<tr><td style='width:120px;'>Cidade:</td><td style='width:380px'>" + cidadeAss + "</td></tr>" +
                 "<tr><td style='width:120px;'>Estado:</td><td style='width:380px'>" + estadoAss + "</td></tr>" +
                 "<tr><td style='width:120px;'>Cell:</td><td style='width:380px'>" + "(" + cellDDD + ")" + numCell + "</td></tr>" +
+                "<tr><td style='width:120px;'>COD. ICCID:</td><td>"+ iccidAss + "</td></tr>" +
                 receberNoticias +
                 "<tr><td style='width:120px;'></td><td style='width:380px'>Concordo com os termos de uso. " + nomeAss + "- CPF:" + cpfAss + "</td></tr>";
             objEmail.SubjectEncoding = Encoding.GetEncoding("ISO-8859-1");
@@ -202,481 +250,41 @@ namespace EasySim4u.Controllers
             objSmtp.Host = "mail.unioperadora.com.br";
             objSmtp.Port = 587;
             objSmtp.EnableSsl = true;
-            objSmtp.Credentials = new NetworkCredential("logistica@unioperadora.com.br", "logistica@br");
+            objSmtp.Credentials = new NetworkCredential("enviar@unioperadora.com.br", "Campinas2020");
             objSmtp.Send(objEmail);
 
             string urlPag = "";
             switch (plano)
             {
                 case 1:
-                    urlPag = "http://pag.ae/7VhogQScN";
+                    urlPag = "http://pag.ae/7V-Q9wD9r";
                     break;
 
                 case 2:
-                    urlPag = "http://pag.ae/7VfxmPNKs";
+                    urlPag = "http://pag.ae/7VZvv-A9u";
                     break;
 
                 case 3:
-                    urlPag = "http://pag.ae/7Vg-1AZcN";
+                    urlPag = "http://pag.ae/7VZvBgoCR";
                     break;
 
                 case 4:
-                    urlPag = "http://pag.ae/7Vh5iBxw9";
+                    urlPag = "http://pag.ae/7VZvBLHYR";
                     break;
 
                 case 5:
-                    urlPag = "http://pag.ae/7Vhcmk9Eq";
+                    urlPag = "http://pag.ae/7VZvC8vxQ";
                     break;
+
+                case 6:
+                    urlPag = "http://pag.ae/7VZvCuier";
+                    //Compra do Chip
+                    //urlPag = "https://pag.ae/7Wcmk2CB9";
+                    break;
+
             }
             return Redirect(urlPag);
         }
-
-
-
-        [HttpPost]
-        public JsonResult CheckOut(string plano, string tokenAss, string valor, string nome, string codArea, string phone, string email, string logradouro, string number, string complement, string bairro, string cep, string cidade, string uf)
-        {
-            //URI de checkout.
-            string credenciais = "af5da14e-1d7f-4e4a-b3eb-848692cf2b3fa0f8b638473da3c1a7ed9438b11b0cb0c109-92ac-45f7-b082-738db55cb886";
-            string uri = @"https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?" + credenciais;
-            string uriAdsaoPlano = @"T https://ws.pagseguro.uol.com.br/pre-approvals?" + credenciais;
-
-            //Conjunto de parâmetros/formData.
-            System.Collections.Specialized.NameValueCollection postData = new System.Collections.Specialized.NameValueCollection();
-            postData.Add("email", "uni@yescelular.com.br");
-            postData.Add("token", tokenAss);
-            postData.Add("currency", "BRL");
-            postData.Add("itemId1", "0001");
-            postData.Add("itemDescription1", plano);
-            postData.Add("itemAmount1", valor);
-            postData.Add("itemQuantity1", "1");
-            postData.Add("itemWeight1", "200");
-            postData.Add("reference", "REF1234");
-            postData.Add("senderName", nome);
-            postData.Add("senderAreaCode", codArea);
-            postData.Add("senderPhone", phone);
-            postData.Add("senderEmail", email);
-            postData.Add("shippingAddressRequired", "true");
-            postData.Add("shippingAddressStreet", logradouro);
-            postData.Add("shippingAddressNumber", number);
-            postData.Add("shippingAddressComplement", complement);
-            postData.Add("shippingAddressDistrict", bairro);
-            postData.Add("shippingAddressPostalCode", cep);
-            postData.Add("shippingAddressCity", cidade);
-            postData.Add("shippingAddressState", uf);
-            postData.Add("shippingAddressCountry", "BRA");
-
-            //String que receberá o XML de retorno.
-            string xmlString = null;
-
-            //Webclient faz o post para o servidor de pagseguro.
-            using (WebClient wc = new WebClient())
-            {
-                //Informa header sobre URL.
-                wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
-
-                //Faz o POST e retorna o XML contendo resposta do servidor do pagseguro.
-                var result = wc.UploadValues(uri, postData);
-
-                //Obtém string do XML.
-                xmlString = Encoding.ASCII.GetString(result);
-            }
-
-            //Cria documento XML.
-            XmlDocument xmlDoc = new XmlDocument();
-
-            //Carrega documento XML por string.
-            xmlDoc.LoadXml(xmlString);
-
-            //Obtém código de transação (Checkout).
-            var code = xmlDoc.GetElementsByTagName("code")[0];
-
-            //Obtém data de transação (Checkout).
-            var date = xmlDoc.GetElementsByTagName("date")[0];
-
-            //Monta a URL para pagamento.
-            var paymentUrl = string.Concat("https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=", code.InnerText);
-
-            //Retorna dados para HTML.
-            //return Json(paymentUrl);
-            return Json(new { paymentUrl }, JsonRequestBehavior.AllowGet);
-        }
-
-
-        //[HttpPost]
-        //public JsonResult ConsultarPlanosRest()
-        //{
-        //    var client = new RestSharp.RestClient("https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/request");
-        //    var request = new RestRequest(Method.GET);
-        //    request.AddHeader("content-type", "application/xml; charset=ISO-8859-1");
-        //    request.AddHeader("Accept", "application/vnd.pagseguro.com.br.v3+xml;charset=ISO-8859-1");
-        //    //request.AddHeader("content-type", "application/x-www-form-urlencoded; charset=ISO-8859-1");
-        //    //request.AddHeader("Content-Type", "application/json; charset=utf-8");
-        //    request.RequestFormat = DataFormat.Xml;
-        //    //request.AddParameter("Content-Type", "application/x-www-form-urlencoded; charset=ISO-8859-1");
-        //    request.AddParameter("email", "uni@yescelular.com.br");
-        //    request.AddParameter("token", "35FA5DC5D426485784C9A5FB13FD2E43");
-        //    IRestResponse response = client.Execute(request);
-
-        //    return Json(response);
-        //}
-
-        //[HttpPost]
-        //public JsonResult CriarPlanoRest()
-        //{
-        //    var client = new RestSharp.RestClient("https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/request");
-        //    var request = new RestRequest(Method.POST);
-        //    request.AddHeader("content-type", "application/xml; charset=ISO-8859-1");
-        //    request.AddHeader("Accept", "application/vnd.pagseguro.com.br.v3+xml;charset=ISO-8859-1");
-        //    //request.AddHeader("content-type", "application/x-www-form-urlencoded; charset=ISO-8859-1");
-        //    //request.AddHeader("Content-Type", "application/json; charset=utf-8");
-        //    request.RequestFormat = DataFormat.Xml;
-        //    //request.AddParameter("Content-Type", "application/x-www-form-urlencoded; charset=ISO-8859-1");
-        //    request.AddParameter("email", "uni@yescelular.com.br");
-        //    request.AddParameter("token", "35FA5DC5D426485784C9A5FB13FD2E43");
-        //    IRestResponse response = client.Execute(request);
-
-        //    return Json(response);
-        //}
-
-        //[HttpPost]
-        //public JsonResult AdesaoPlanoRest()
-        //{
-        //    var client = new RestSharp.RestClient("https://ws.sandbox.pagseguro.uol.com.br/pre-approvals");
-        //    var request = new RestRequest(Method.POST);
-        //    request.AddHeader("content-type", "application/xml; charset=ISO-8859-1");
-        //    request.AddHeader("Accept", "application/vnd.pagseguro.com.br.v3+xml;charset=ISO-8859-1");
-        //    //request.AddHeader("content-type", "application/x-www-form-urlencoded; charset=ISO-8859-1");
-        //    //request.AddHeader("Content-Type", "application/json; charset=utf-8");
-        //    request.RequestFormat = DataFormat.Xml;
-        //    //request.AddParameter("Content-Type", "application/x-www-form-urlencoded; charset=ISO-8859-1");
-        //    request.AddParameter("email", "uni@yescelular.com.br");
-        //    request.AddParameter("token", "35FA5DC5D426485784C9A5FB13FD2E43");
-        //    request.AddParameter("plan", "B533C30AF1F14D2AA4B95FB8759FE0D0");
-        //    request.AddParameter("reference", "REF1234");
-        //    request.AddParameter("sender.name", "DAVID");
-        //    request.AddParameter("sender.email", "davidfico22@sandbox.pagseguro.com.br");
-        //    request.AddParameter("sender.ip", "192.168.0.1");
-        //    request.AddParameter("sender.hash", "hash");
-        //    request.AddParameter("sender.phone.areaCode", "19");
-        //    request.AddParameter("sender.phone.number", "9999999");
-        //    request.AddParameter("paymentMethod.type", "");
-        //    request.AddParameter("paymentMethod.creditCard.token", "30303030303000004");
-        //    request.AddParameter("paymentMethod.creditCard.holder.name", "DAVID FICO");
-        //    request.AddParameter("paymentMethod.creditCard.holder.birthDate", "22/05/1978");
-
-        //    IRestResponse response = client.Execute(request);
-
-        //    return Json(response);
-        //}
-
-
-        [HttpPost]
-        public JsonResult CriarPlano()
-        {
-
-            string uriCriarPlanSandbox = @"https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/request";
-            System.Collections.Specialized.NameValueCollection postData = new System.Collections.Specialized.NameValueCollection
-            {
-                { "email", "uni@yescelular.com.br" },
-                { "token", "35FA5DC5D426485784C9A5FB13FD2E43" },
-                { "currency", "BRL" },
-                { "reference", "REF1" },
-                { "preApprovalName", "Plano Controle 15Gb" },
-                { "preApprovalCharge", "AUTO" },
-                //{ "sender.ip", "192.168.0.1" },
-                //{ "sender.hash", "hash" },
-                { "preApprovalPeriod", "MONTHLY" },
-                { "preApprovalAmountPerPayment", "79.90" },
-                { "preApprovalDetails", "Plano controle sera cobrado mensamente todo dia 12" },
-                { "receiverEmail", "davidfico22@sandbox.pagseguro.com.br" }
-
-                //{ "preApprovalCharge", "auto" },
-                //{ "preApprovalName", "Assinatura mensal" },
-                //{ "preApprovalDetails", "Cobrança de valor mensal para assinatura" },
-                //{ "preApprovalAmountPerPayment", "199.99"},
-                //{ "preApprovalPeriod", "MONTHLY"}
-            };
-            //String que receberá o XML de retorno.
-            string xmlString = null;
-
-            //Webclient faz o post para o servidor de pagseguro.
-            using (WebClient wc = new WebClient())
-            {
-                //Informa header sobre URL.
-                wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
-                //wc.Headers[HttpRequestHeader.ContentType] = "application/xml;charset=ISO-8859-1";
-
-                //Faz o POST e retorna o XML contendo resposta do servidor do pagseguro.
-                var result = wc.UploadValues(uriCriarPlanSandbox, postData);
-                //var sessao = wc.UploadValues(uriAdSessaoSandbox, null);
-
-                //Obtém string do XML.
-                xmlString = Encoding.ASCII.GetString(result);
-                //xmlString = Encoding.ASCII.GetString(sessao);
-            }
-
-            //Cria documento XML.
-            XmlDocument xmlDoc = new XmlDocument();
-
-            //Carrega documento XML por string.
-            xmlDoc.LoadXml(xmlString);
-
-            //Obtém código de transação (Checkout).
-            var code = xmlDoc.GetElementsByTagName("code")[0];
-
-            //Obtém data de transação (Checkout).
-            var date = xmlDoc.GetElementsByTagName("date")[0];
-
-            //Monta a URL para pagamento.
-            var paymentUrl = string.Concat("https://pagseguro.uol.com.br/checkout/v2/pre-approvals/nc/sender-identification.jhtml?t=", code.InnerText);
-
-            //Retorna dados para HTML.
-            return Json(paymentUrl);
-            //return Json(true);
-
-        }
-
-
-
-        [HttpPost]
-        public JsonResult AdesaoPlano(int plano, string nome, string cpf, string codArea, string phone, string email, string logradouro, string number, string complement, string bairro, string cep, string cidade, string uf)
-        {
-
-
-            string alphnumerico = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            int count = 8;
-            Random random = new Random();
-            string str = new string(Enumerable.Repeat<string>(alphnumerico, count).Select<string, char>((Func<string, char>)(s => s[random.Next(s.Length)])).ToArray<char>());
-            string tokenAss = "";
-            string planoStr = "";
-            decimal valorPlan = 0;
-            string idPlano = "";
-            string refInter = "";
-            string refereciaSolicit = str.ToString();
-            switch (plano)
-            {
-                case 1:
-                    planoStr = "Plano Controle - 10Gb";
-                    tokenAss = "5BEFCBEB-2424-4430-0432-9F9828128A99";
-                    valorPlan = Convert.ToDecimal("59,90");
-                    idPlano = "3977db37c524d10bfe85c89feb2c3fa6";
-                    break;
-
-                case 2:
-                    planoStr = "Plano Controle - 15Gb";
-                    tokenAss = "24A399FC-1111-5222-240B-3FB33815223B";
-                    valorPlan = Convert.ToDecimal("79,90");
-                    idPlano = "eb909df23502218d04537c87e84ccc2b";
-                    break;
-
-                case 3:
-                    refInter = "CRT20GB";
-                    planoStr = "Plano Controle - 20Gb";
-                    tokenAss = "B1C63082-5252-EE01-1448-9F9EA998F655";
-                    valorPlan = Convert.ToDecimal("89,90");
-                    idPlano = "05d95904a4ad1b27c911cab692b2f544";
-                    break;
-
-            }
-
-            //URI de checkout.
-            string credenciais = "af5da14e-1d7f-4e4a-b3eb-848692cf2b3fa0f8b638473da3c1a7ed9438b11b0cb0c109-92ac-45f7-b082-738db55cb886";
-            string credencSandbox = "35FA5DC5D426485784C9A5FB13FD2E43";
-
-            string uriAdsaoPlano = @"https://ws.pagseguro.uol.com.br/pre-approvals?" + credenciais;
-            //string uriAdPlanSandbox = @"https://ws.sandbox.pagseguro.uol.com.br/pre-approvals?email=uni@yescelular.com.br&token=35FA5DC5D426485784C9A5FB13FD2E43";
-            string uriAdPlanSandbox = @"https://ws.sandbox.pagseguro.uol.com.br/pre-approvals";
-
-
-            //Conjunto de parâmetros/formData.
-            System.Collections.Specialized.NameValueCollection postData = new System.Collections.Specialized.NameValueCollection
-            {
-                { "email", "uni@yescelular.com.br" },
-                { "token", "35FA5DC5D426485784C9A5FB13FD2E43" },
-                { "plan", tokenAss },
-                { "currency", "BRL" },
-                { "reference", "REF1" },
-                { "senderName", nome },
-                { "senderEmail", email },
-                //{ "sender.ip", "192.168.0.1" },
-                //{ "sender.hash", "hash" },
-                { "sender.phone.areaCode", codArea },
-                { "sender.phone.numero", phone },
-                { "sender.address.street", logradouro },
-                { "sender.address.number", number },
-                { "sender.address.complement", complement },
-                { "sender.address.district", bairro },
-                { "sender.address.city", cidade },
-                { "sender.address.state", uf },
-                { "sender.address.postalCode", cep },
-                { "sender.documents.type", "CPF" },
-                { "sender.documents.value", cpf }
-
-                //{ "preApprovalCharge", "auto" },
-                //{ "preApprovalName", "Assinatura mensal" },
-                //{ "preApprovalDetails", "Cobrança de valor mensal para assinatura" },
-                //{ "preApprovalAmountPerPayment", "199.99"},
-                //{ "preApprovalPeriod", "MONTHLY"}
-        };
-
-            //String que receberá o XML de retorno.
-            string xmlString = null;
-
-            //Webclient faz o post para o servidor de pagseguro.
-            using (WebClient wc = new WebClient())
-            {
-                //Informa header sobre URL.
-                wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
-
-                //Faz o POST e retorna o XML contendo resposta do servidor do pagseguro.
-                var result = wc.UploadValues(uriAdPlanSandbox, postData);
-                //var sessao = wc.UploadValues(uriAdSessaoSandbox, null);
-
-                //Obtém string do XML.
-                xmlString = Encoding.ASCII.GetString(result);
-                //xmlString = Encoding.ASCII.GetString(sessao);
-            }
-
-            //Cria documento XML.
-            XmlDocument xmlDoc = new XmlDocument();
-
-            //Carrega documento XML por string.
-            xmlDoc.LoadXml(xmlString);
-
-            //Obtém código de transação (Checkout).
-            var code = xmlDoc.GetElementsByTagName("code")[0];
-
-            //Obtém data de transação (Checkout).
-            var date = xmlDoc.GetElementsByTagName("date")[0];
-
-            //Monta a URL para pagamento.
-            var paymentUrl = string.Concat("https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=", code.InnerText);
-
-            //Retorna dados para HTML.
-            //return Json(paymentUrl);
-            return Json(new { paymentUrl }, JsonRequestBehavior.AllowGet);
-        }
-
-        [HttpPost]
-        public JsonResult VendaProd()
-        {
-
-
-            //URI de checkout.
-            string credenciais = "af5da14e-1d7f-4e4a-b3eb-848692cf2b3fa0f8b638473da3c1a7ed9438b11b0cb0c109-92ac-45f7-b082-738db55cb886";
-            string credencSandbox = "35FA5DC5D426485784C9A5FB13FD2E43";
-
-            string uriSandbox = @"https://ws.sandbox.pagseguro.uol.com.br/v2/checkout";
-
-
-
-            //Conjunto de parâmetros/formData.
-            System.Collections.Specialized.NameValueCollection postData = new System.Collections.Specialized.NameValueCollection
-            {
-                { "email", "uni@yescelular.com.br" },
-                { "token", "35FA5DC5D426485784C9A5FB13FD2E43" },
-                { "currency", "BRL" },
-                { "itemId1", "0001" },
-                { "itemDescription1", "NOTEBOOK SEMP TOSHIBA" },
-                { "itemAmount1", "3000.00" },
-                { "itemQuantity1", "1" },
-                { "itemWeight", "200" },
-                { "reference", "REF1" },
-                { "senderName", "David Fico" },
-                { "senderAreaCode", "19" },
-                { "senderPhone", "99999999" },
-                { "senderEmail", "davidfico22@sandbox.pagseguro.com.br" },
-                { "shippingAddressRequirede", "false" }
-            };
-
-            //String que receberá o XML de retorno.
-            string xmlString = null;
-
-            //Webclient faz o post para o servidor de pagseguro.
-            using (WebClient wc = new WebClient())
-            {
-                //Informa header sobre URL.
-                wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
-
-                //Faz o POST e retorna o XML contendo resposta do servidor do pagseguro.
-                var result = wc.UploadValues(uriSandbox, postData);
-                //var sessao = wc.UploadValues(uriAdSessaoSandbox, null);
-
-                //Obtém string do XML.
-                xmlString = Encoding.ASCII.GetString(result);
-                //xmlString = Encoding.ASCII.GetString(sessao);
-            }
-
-            //Cria documento XML.
-            XmlDocument xmlDoc = new XmlDocument();
-
-            //Carrega documento XML por string.
-            xmlDoc.LoadXml(xmlString);
-
-            //Obtém código de transação (Checkout).
-            var code = xmlDoc.GetElementsByTagName("code")[0];
-
-            //Obtém data de transação (Checkout).
-            var date = xmlDoc.GetElementsByTagName("date")[0];
-
-            //Monta a URL para pagamento.
-            var paymentUrl = string.Concat("https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=", code.InnerText);
-
-            //Retorna dados para HTML.
-            //return Json(paymentUrl);
-            return Json(paymentUrl);
-        }
-
-
-
-        [HttpPost]
-        public JsonResult Sessao()
-        {
-
-
-            string uriAdSessaoSandbox = @"https://ws.sandbox.pagseguro.uol.com.br/sessions";
-
-            System.Collections.Specialized.NameValueCollection postData = new System.Collections.Specialized.NameValueCollection
-            {
-                { "email", "uni@yescelular.com.br" },
-                { "token", "35FA5DC5D426485784C9A5FB13FD2E43" }
-
-            };
-
-            //String que receberá o XML de retorno.
-            string xmlString = null;
-
-            //Webclient faz o post para o servidor de pagseguro.
-            using (WebClient wc = new WebClient())
-            {
-                //Informa header sobre URL.
-                wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
-
-                var sessao = wc.UploadValues(uriAdSessaoSandbox, postData);
-
-                //Obtém string do XML.
-
-                xmlString = Encoding.ASCII.GetString(sessao);
-            }
-
-            //Cria documento XML.
-            XmlDocument xmlDoc = new XmlDocument();
-
-            //Carrega documento XML por string.
-            xmlDoc.LoadXml(xmlString);
-
-            //Obtém código de transação (Checkout).
-            var code = xmlDoc.GetElementsByTagName("code")[0];
-
-            //Obtém data de transação (Checkout).
-            var date = xmlDoc.GetElementsByTagName("id")[0];
-            string sessaoStr = xmlDoc.InnerText;
-
-            return Json(new { sessaoStr }, JsonRequestBehavior.AllowGet);
-        }
-
-
 
 
         public ActionResult SucessoAss()
@@ -685,23 +293,50 @@ namespace EasySim4u.Controllers
         }
 
 
-        public JsonResult EnviaEmail(string assunto, string nome, string email, string cep, string bairro, string logradouro, string numero, string cidade, string estado, string telefone, string mensagem, string complemento)
+        public JsonResult EnviaEmail(string nome, string email, string cep, string bairro, string logradouro, string numero, string cidade, string estado, string telefone, string complemento, int plano)
         {
+            string linhaPlano = "";
+            switch (plano)
+            {
+                case 1:
+                    linhaPlano = "<tr><td colspan='2'>Plano controle 3Gb</td></tr>";
+                    break;
+                case 2:
+                    linhaPlano = "<tr><td colspan='2'>Plano controle 5Gb</td></tr>";
+                    break;
+                case 3:
+                    linhaPlano = "<tr><td colspan='2'>Plano controle 10Gb</td></tr>";
+                    break;
+                case 4:
+                    linhaPlano = "<tr><td colspan='2'>Plano controle 15Gb</td></tr>";
+                    break;
+                case 5:
+                    linhaPlano = "<tr><td colspan='2'>Plano controle 20Gb</td></tr>";
+                    break;
+                case 6:
+                    linhaPlano = "<tr><td colspan='2'>Plano controle 50Gb</td></tr>";
+                    break;
+
+            }
+
             MailMessage objEmail = new MailMessage();
             //objEmail.From = new MailAddress("pediulogistica@uniglobaltelecom.com");
             objEmail.From = new MailAddress(email);
             //objEmail.ReplyTo = new MailAddress("davidfico22@gmail.com", "damico@mdk.net.br");
-            objEmail.To.Add("contato@easysim4u.com");
+            objEmail.To.Add("contato_easy@unioperadora.com");
+            //objEmail.To.Add("davidfico22@gmail.com");
+            objEmail.To.Add("operacional@easysim4u.com");
+            //objEmail.Bcc.Add("crm.easysim4u@gmail.com");
             //objEmail.To.Add("davidfico22@gmail.com");
             objEmail.Bcc.Add("damico@mdk.net.br");
             objEmail.Priority = MailPriority.Normal;
             objEmail.IsBodyHtml = true;
-            objEmail.Subject = assunto;
+            objEmail.Subject = "Solicitação de envio do SIM Card.";
             objEmail.Body = "<h3 style='font-family:Arial'>" + nome + "</h3>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 "<tr style='background-color:#0a2f59'>" +
-                "<td style='width:120px;'><img src='http://www.unioperadora.com.br/assets/img/logo/logo.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
-                "<td style='width:380px'><h3 style='font-family:Arial; color:white; text-align:center'>" + assunto + "</h3></td></tr></table>" +
+                "<td style='width:120px;'><img src='https://www.easysim4ubrasil.com/assets/img/logo/LogoEasySim4u.png' alt='Logo Unioperadora' style='width:120px' /></td>" +
+                "<td style='width:380px'><h3 style='font-family:Arial; color:white; text-align:center'>Solicitação de envio do SIM Card.</h3></td></tr></table>" +
                 "<table style='width:500px; height:70px; font-family:Arial; border:0px'>" +
                 "<tr><td>Email:</td><td>" + email + "</td></tr>" +
                 "<tr><td>Fone:</td><td>" + telefone + "</td></tr>" +
@@ -713,17 +348,17 @@ namespace EasySim4u.Controllers
                 "<tr><td>Cidade:</td><td>" + cidade + "</td></tr>" +
                 "<tr><td>Estado:</td><td>" + estado + "</td></tr>" +
                 "<tr><td colspan='2'>Mensagem:</td></tr>" +
-                "<tr><td colspan='2'>" + mensagem + "</td></tr>";
+                "<tr><td colspan='2'>Gostaria de fazer a soliciatação de um SIM Card.</td></tr>" + linhaPlano;
             objEmail.SubjectEncoding = Encoding.GetEncoding("ISO-8859-1");
             objEmail.BodyEncoding = Encoding.GetEncoding("ISO-8859-1");
             SmtpClient objSmtp = new SmtpClient();
             objSmtp.Host = "mail.unioperadora.com.br";
             objSmtp.Port = 587;
             objSmtp.EnableSsl = true;
-            objSmtp.Credentials = new NetworkCredential("contato_easy@unioperadora.com", "Campinas2020");
+            objSmtp.Credentials = new NetworkCredential("enviar@unioperadora.com.br", "Campinas2020");
             objSmtp.Send(objEmail);
 
-
+            
             return Json(true);
         }
 
@@ -735,8 +370,10 @@ namespace EasySim4u.Controllers
             //objEmail.From = new MailAddress("pediulogistica@uniglobaltelecom.com");
             objEmail.From = new MailAddress(email);
             //objEmail.ReplyTo = new MailAddress("davidfico22@gmail.com", "damico@mdk.net.br");
-            objEmail.To.Add("contato@unioperadora.com.br");
+            objEmail.To.Add("contato_easy@unioperadora.com");
             //objEmail.To.Add("davidfico22@gmail.com");
+            objEmail.Bcc.Add("crm.easysim4u@gmail.com");
+            objEmail.Bcc.Add("davidfico22@gmail.com");
             objEmail.Bcc.Add("damico@mdk.net.br");
             objEmail.Priority = MailPriority.Normal;
             objEmail.IsBodyHtml = true;
@@ -757,7 +394,7 @@ namespace EasySim4u.Controllers
             objSmtp.Host = "mail.unioperadora.com.br";
             objSmtp.Port = 587;
             objSmtp.EnableSsl = true;
-            objSmtp.Credentials = new NetworkCredential("contato_easy@unioperadora.com", "Campinas2020");
+            objSmtp.Credentials = new NetworkCredential("enviar@unioperadora.com.br", "Campinas2020");
             objSmtp.Send(objEmail);
 
 
@@ -774,6 +411,7 @@ namespace EasySim4u.Controllers
             objEmail.From = new MailAddress(email);
             //objEmail.ReplyTo = new MailAddress("davidfico22@gmail.com", "damico@mdk.net.br");
             objEmail.To.Add("ativacao@unioperadora.com.br");
+            objEmail.To.Add("operacional@easysim4u.com");
             //objEmail.To.Add("davidfico22@gmail.com");
             objEmail.Bcc.Add("damico@mdk.net.br");
             objEmail.Priority = MailPriority.Normal;
@@ -805,7 +443,7 @@ namespace EasySim4u.Controllers
             objSmtp.Host = "mail.unioperadora.com.br";
             objSmtp.Port = 587;
             objSmtp.EnableSsl = true;
-            objSmtp.Credentials = new NetworkCredential("contato_easy@unioperadora.com", "Campinas2020");
+            objSmtp.Credentials = new NetworkCredential("enviar@unioperadora.com.br", "Campinas2020");
             objSmtp.Send(objEmail);
 
 
@@ -906,180 +544,13 @@ namespace EasySim4u.Controllers
             objSmtp.Host = "mail.unioperadora.com.br";
             objSmtp.Port = 587;
             objSmtp.EnableSsl = true;
-            objSmtp.Credentials = new NetworkCredential("contato_easy@unioperadora.com", "Campinas2020");
+            objSmtp.Credentials = new NetworkCredential("enviar@unioperadora.com.br", "Campinas2020");
             objSmtp.Send(objEmail);
 
 
             return Json(true);
         }
 
-
-
-        [HttpPost]
-        public JsonResult CriarPlanoAPI()
-        {
-            bool isSandbox = true;
-            EnvironmentConfiguration.ChangeEnvironment(isSandbox);
-
-            // Instantiate a new preApproval request
-            PreApprovalRequest preApproval = new PreApprovalRequest();
-
-            // Sets the currency
-            preApproval.Currency = Currency.Brl;
-
-            // Sets a reference code for this preApproval request, it is useful to identify this payment in future notifications.
-            preApproval.Reference = "REF1234";
-
-            // Sets the preApproval informations
-            var now = DateTime.Now;
-            preApproval.PreApproval = new PreApproval();
-            preApproval.PreApproval.Charge = Charge.Manual;
-            preApproval.PreApproval.Name = "Seguro contra roubo do Notebook";
-            preApproval.PreApproval.AmountPerPayment = 100.00m;
-            preApproval.PreApproval.MaxAmountPerPeriod = 100.00m;
-            preApproval.PreApproval.MaxPaymentsPerPeriod = 5;
-            preApproval.PreApproval.Details = string.Format("Todo dia {0} será cobrado o valor de {1} referente ao seguro contra roubo do Notebook.", now.Day, preApproval.PreApproval.AmountPerPayment.ToString("C2"));
-            preApproval.PreApproval.Period = Period.Monthly;
-            preApproval.PreApproval.DayOfMonth = now.Day;
-            preApproval.PreApproval.InitialDate = now;
-            preApproval.PreApproval.FinalDate = now.AddMonths(6);
-            preApproval.PreApproval.MaxTotalAmount = 600.00m;
-
-            // Sets the url used by PagSeguro for redirect user after ends checkout process
-            preApproval.RedirectUri = new Uri("http://www.lojamodelo.com.br/retorno");
-
-            // Sets the url used for user review the signature or read the rules
-            preApproval.ReviewUri = new Uri("http://www.lojamodelo.com.br/revisao");
-
-            SenderDocument senderCPF = new SenderDocument(Documents.GetDocumentByType("CPF"), "12345678909");
-            preApproval.Sender.Documents.Add(senderCPF);
-
-            try
-            {
-                AccountCredentials credentials = PagSeguroConfiguration.Credentials(isSandbox);
-
-                Uri preApprovalRedirectUri = preApproval.Register(credentials);
-
-                Console.WriteLine("URL do pagamento : " + preApprovalRedirectUri);
-                Console.ReadKey();
-            }
-            catch (PagSeguroServiceException exception)
-            {
-                Console.WriteLine(exception.Message + "\n");
-
-                foreach (ServiceError element in exception.Errors)
-                {
-                    Console.WriteLine(element + "\n");
-                }
-                Console.ReadKey();
-            }
-
-            return Json(true);
-        }
-
-        [HttpPost]
-        public JsonResult AdesaoPlanoAPI()
-        {
-            bool isSandbox = true;
-            EnvironmentConfiguration.ChangeEnvironment(isSandbox);
-
-            // Instantiate a new payment request
-            PaymentRequest payment = new PaymentRequest();
-
-            // Sets the currency
-            payment.Currency = Currency.Brl;
-
-            // Add an item for this preApproval payment request
-            payment.Items.Add(new Item("0001", "Seguro contra roubo do Notebook", 1, 10.00m));
-
-            // Sets a reference code for this payment request, it is useful to identify this payment in future notifications.
-            payment.Reference = "REF1234";
-            payment.Sender = new Sender("DAVID FICO", "davidfico22@sandbox.pagseguro.com.br", new Phone("19", "99999999"));
-
-            // Sets the previous preApproval code
-            payment.PreApprovalCode = "B533C30AF1F14D2AA4B95FB8759FE0D0";
-
-            try
-            {
-                AccountCredentials credentials = PagSeguroConfiguration.Credentials(isSandbox);
-                String result = PreApprovalService.ChargePreApproval(credentials, payment);
-
-                Console.WriteLine(result);
-                Console.ReadKey();
-            }
-            catch (PagSeguroServiceException exception)
-            {
-                Console.WriteLine(exception.Message + "\n");
-
-                foreach (ServiceError element in exception.Errors)
-                {
-                    Console.WriteLine(element + "\n");
-                }
-                Console.ReadKey();
-            }
-            return Json(true);
-        }
-
-        [HttpPost]
-        public JsonResult FindPlanoAPI()
-        {
-            bool isSandbox = true;
-            EnvironmentConfiguration.ChangeEnvironment(isSandbox);
-
-            // TODO: Substitute the code below with a valid preApproval code for your transaction
-            String preApprovalCode = "B533C30AF1F14D2AA4B95FB8759FE0D0";
-
-            //try
-            //{
-            AccountCredentials credentials = PagSeguroConfiguration.Credentials(isSandbox);
-
-            PreApprovalTransaction result = PreApprovalSearchService.SearchByCode(credentials, preApprovalCode);
-            //return Json(result);
-            //Console.WriteLine(result);
-            //Console.ReadKey();
-            //}
-            //catch (PagSeguroServiceException exception)
-            //{
-            //Console.WriteLine(exception.Message + "\n");
-
-            //foreach (ServiceError element in exception.Errors)
-            //{
-            //Console.WriteLine(element + "\n");
-            //}
-            //Console.ReadKey();
-            //}
-            return Json(result);
-        }
-
-        [HttpPost]
-        public JsonResult CancelAssinatura()
-        {
-            bool isSandbox = true;
-            EnvironmentConfiguration.ChangeEnvironment(isSandbox);
-
-            // TODO: Substitute the code below with a valid transaction code for your transaction
-            String transactionCode = "B533C30AF1F14D2AA4B95FB8759FE0D0";
-
-            try
-            {
-                AccountCredentials credentials = PagSeguroConfiguration.Credentials(isSandbox);
-                bool cancelResult = PreApprovalService.CancelPreApproval(credentials, transactionCode);
-
-                Console.WriteLine(cancelResult);
-                Console.ReadKey();
-            }
-            catch (PagSeguroServiceException exception)
-            {
-                Console.WriteLine(exception.Message + "\n");
-
-                foreach (ServiceError element in exception.Errors)
-                {
-                    Console.WriteLine(element + "\n");
-                }
-                Console.ReadKey();
-            }
-            return Json(true);
-        }
 
         public ActionResult TermosUso()
         {

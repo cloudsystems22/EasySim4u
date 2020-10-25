@@ -127,7 +127,7 @@ function ativacaoEmail(a, b, c, d, e, f, g, h, i, j, l, m, n, o, p, q, r) {
 
         },
         error: function (error) {
-            alert("Verifique o formato do e-mail e insira um e-mail válido! Ou encaminhe seu e-mail para uni@yescelular.com.br", error.responseText);
+            alert("Verifique o formato do e-mail e insira um e-mail válido! Ou encaminhe seu e-mail para crm.easysim4u@gmail.com", error.responseText);
         }
     });
 }

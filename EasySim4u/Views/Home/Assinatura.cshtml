@@ -164,16 +164,8 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6" id="divNumeroCell" style="">
-                            <label>*Anexar Doc. identidade com foto *.pdf ou *.jpg</label>
-                            <div class="input-group">
-                                <input class="form-control" type="file" name="pdfFile" id="input-pdfFile" accept=".pdf,.jpg" required />
-                            </div>
-                            <span id="spnArquivo" style="font-weight:bold; text-align:center"></span>
-
-                        </div>
-                        <!--
-                        <div class="col-md-4">
+                        
+                        <div class="col-md-6">
                             <label class="col-md-10">*ICCID <a href="#!" id="linkHelp"><i class="fa fa-question-circle"></i></a><span style="color:red; font-size:9pt" id="msgICCIDAss"></span></label>
                             <div id="myTooltip" style="" class="div_teste">
                                 <div style="margin:5px; padding:5px; width:auto; height:auto">
@@ -187,11 +179,19 @@
                                 </div>
                             </div>
                             <input id="txtICCID" name="iccidAss" class="form-control u-form-control-lg" type="text" />
-                        </div>-->
+                        </div>
+                        <div class="col-md-12" id="divNumeroCell" style="">
+                            <label>*Anexar Doc. identidade com foto *.pdf ou *.jpg</label>
+                            <div class="input-group">
+                                <input class="form-control" type="file" name="pdfFile" id="input-pdfFile" accept=".pdf,.jpg" required />
+                            </div>
+                            <span id="spnArquivo" style="font-weight:bold; text-align:center"></span>
+
+                        </div>
                         <div class="col-md-12">
                             <br />
                             <input type="checkbox" name="newsletter" /> Deseja receber mensagens e promoções da EASYSIM4U? <br />
-                            <input type="checkbox" name="aceite" id="chkAceite" /> Li e concordo com os <a href="#!">termos de uso</a>!
+                            <input type="checkbox" name="aceite" id="chkAceite" /> Li e concordo com os <a href="@Url.Action("TermosUso")" target="_blank">termos de uso</a>!
                         </div>
                         <div class="col-md-12">
                             <hr />
